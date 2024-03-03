@@ -1,11 +1,16 @@
-me={
-"name":"李学健",
-"age":21,
-"QQ":"1796448871"
+phone=input("phone: ")
+map={
+    "1":"One",
+    "2":"Two",
+    "3":"Three",
+    "4":"Four",
+    "5":"Five",
+    "6":"Six",
+    "7":"Seven",
+    "8":"Eight",
+    "9":"Nine",
+    # 按win+;就可以调出emjor表情页面
+    "!":"😊"
 }
-print(me.get("name"))
-print(me.get("QQ"))
-print(me["QQ"])
-# 新加了一个键值对
-me["birthday"]="2002.11.21"
-print(me)
+for ch in phone:
+    print(map.get(ch))
