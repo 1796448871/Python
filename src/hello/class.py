@@ -8,3 +8,12 @@ class people:
 p1=people("Danding")
 print(p1.name)
 p1.draw()
+
+
+class Children(people):
+    pass
+class Older(people):
+    pass
+
+o=Older("lA")
+o.draw()

@@ -1,7 +1,4 @@
-sum=0
+from utils import mathh
 
-for item in[10,20,30]:
-    print(item)
-    sum+=item
-print(sum)
-
+# 在同级文件夹可以生效，但无法导入
+print (mathh.toXten(2))
