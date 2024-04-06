@@ -1,4 +1,3 @@
-# 牛逼万能的eval函数
 list1 = eval(input())
 list=sorted(list1)
 len=len(list)
