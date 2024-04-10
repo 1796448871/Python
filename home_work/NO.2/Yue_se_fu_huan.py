@@ -6,7 +6,7 @@ while True:
         all.extend(range(1,n+1))
         # 计数用，记录当前的下标
         jishu=0
-        while(len(all)!=1):\
+        while(len(all)!=1):
             #此逻辑通用：如果+1之后大于len就重置到最初的位置 
             if((jishu+1)>(len(all)-1)):
                 jishu=0
