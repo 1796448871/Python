@@ -1,22 +1,20 @@
 import numpy as np
 
-# 随机生成一个 8x8 的矩阵，模拟JPEG图像块DCT变换后的结果
-matrix = np.random.randint(0, 255, size=(8, 8))
+# 随机生成一个矩阵，模拟JPEG图像块DCT变换后的结果
+random_matrix = np.random.randint(0, 256, (8, 8))
 
-# 使用色度量化表进行量化
-color_table = np.array([
-    [17, 18, 24, 47, 99, 99, 99, 99],
-    [18, 21, 26, 66, 99, 99, 99, 99],
-    [24, 26, 56, 99, 99, 99, 99, 99],
-    [47, 66, 99, 99, 99, 99, 99, 99],
-    [99, 99, 99, 99, 99, 99, 99, 99],
-    [99, 99, 99, 99, 99, 99, 99, 99],
-    [99, 99, 99, 99, 99, 99, 99, 99],
-    [99, 99, 99, 99, 99, 99, 99, 99]
-])
+# 色度量化表
+quantization_table = np.array([[16, 11, 10, 16, 24, 40, 51, 61],
+                                [12, 12, 14, 19, 26, 58, 60, 55],
+                                [14, 13, 16, 24, 40, 57, 69, 56],
+                                [14, 17, 22, 29, 51, 87, 80, 62],
+                                [18, 22, 37, 56, 68, 109, 103, 77],
+                                [24, 35, 55, 64, 81, 104, 113, 92],
+                                [49, 64, 78, 87, 103, 121, 120, 101],
+                                [72, 92, 95, 98, 112, 100, 103, 99]])
 
-quantized_matrix = np.round(matrix / color_table)
-
+# 量化
+quantized_matrix = np.round(random_matrix / quantization_table)
 
 # Z字形行程编码
 def run_length_encoding(matrix):
@@ -65,16 +63,14 @@ encoded_matrix = run_length_encoding(quantized_matrix)
 # 反Z字形行程编码
 decoded_matrix = run_length_decoding(encoded_matrix)
 
-dequantized_matrix = decoded_matrix * color_table
+dequantized_matrix = decoded_matrix * quantization_table
 
 
 print("原始矩阵:")
-print(matrix)
-print("---------------------------------")
-print("量化后的矩阵:")
+print(random_matrix)
+print("\n量化后矩阵:")
 print(quantized_matrix)
-print("---------------------------------")
-print("Z字形行程编码后的结果:")
+print("\nZ字形行程编码后:")
 print(encoded_matrix)
-print("---------------------------------")
-print(decoded_matrix)
+print("\n恢复后的矩阵:")
+print(dequantized_matrix)

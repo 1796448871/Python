@@ -1,24 +1,21 @@
 class sentence(object):
     def __init__(self,name):
         self.name=name
-    def printIt(self):
-        print("输入的字符串是：",self.name,end="，")
-    def printCount(self):
-        print("共有",end="")
-        print(len(self.name),end="")
-        print("个字符")
-    def intoList(self):
-        print("其中有单词：",(self.name).split(),"，共有",end="")
-        print(len(self.name.split()),end="")
-        print("个单词。")
+    def getSectence(self):
+        return "输入的字符串是："+ self.name
+    def getLength(self):
+        return "，"+"共有"+str(len(self.name))+"个字符。"
+    def getNumWords(self):
+        return"其中有单词："+str((self.name).split())+"，共有"+str(len(self.name.split()))+"个单词。"
+    def getWords(self):
+        return str(self.name.split())
+    def setSentenceUp(self):
+        self.name=str.upper(self.name) 
+        return self
+    def __str__(self):
+        return self.getSectence()+self.getLength()+"\n"+self.getNumWords()
  
-inp=str(input())
-d=sentence(inp)
-d.printIt()
-d.printCount()
-d.intoList()
-inp2=inp.upper()
-e=sentence(inp2)
-e.printIt()
-e.printCount()
-e.intoList()
+inp=sentence(str(input())) 
+print(inp)
+inp2=inp.setSentenceUp()
+print(inp2)
