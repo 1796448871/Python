@@ -58,6 +58,4 @@ def main():
     v6.show()
     v7 = v2//2
     v7.show()
-
-
 main()
