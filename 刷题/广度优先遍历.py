@@ -4,6 +4,8 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+from collections import deque
+
 class Solution(object):
     def levelOrder(self, root):
         """
