@@ -14,9 +14,26 @@ from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay, accuracy_score
 import numpy as np
+import seaborn as sns
 
 # 加载数据集
 data = pd.read_csv('WineQT.csv')
+
+# 计算相关性矩阵
+correlation_matrix = data.corr()
+
+# 打印相关性矩阵
+print("Correlation Matrix:\n", correlation_matrix)
+
+# 绘制热力图
+plt.figure(figsize=(12, 10))
+sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap='coolwarm', center=0,
+            linewidths=0.5, cbar_kws={"shrink": .8})
+plt.title('Correlation Matrix Heatmap')
+plt.show()
+
+# 统计描述
+print(data.describe())
 
 # 查看数据集的前几行
 print(data.head())
