@@ -4,3 +4,4 @@ src/爬虫/Pa_Chong.py
 noc_regions.csv
 .gitignore
 athlete_events.csv
+joblib

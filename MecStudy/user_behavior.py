@@ -11,6 +11,8 @@ from sklearn.naive_bayes import GaussianNB
 from imblearn.over_sampling import SMOTE
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
+from joblib import dump  # 导入保存模型的库
+
 
 """ Preprocessing 预处理 """
 
@@ -188,3 +190,21 @@ print()
 print('\nLogistic Regression Classifier\n', logreg_report)
 print()
 print('\nDecision Tree Classifier\n', dtree_report)
+
+
+
+""" 
+解决反斜杠\路径读取出问题的办法：
+1.使用双反斜杠 \\
+2.使用原始字符串 r 
+3.使用正斜杠 /
+4.使用 os.path.join
+"""
+# 保存模型、标准化器和标签编码器
+dump(svm, 'joblib\svm_model.joblib')
+dump(rf, 'joblib\\random_forest_model.joblib')
+dump(gnb, r'joblib\naive_bayes_model.joblib')
+dump(logreg, 'joblib/logistic_regression_model.joblib')
+dump(dtree, 'joblib\decision_tree_model.joblib')
+dump(scaler, 'joblib\scaler.joblib')
+dump(le, 'joblib\label_encoder.joblib')

@@ -1,0 +1,6 @@
+User ID,Device Model,Operating System,App Usage Time (min/day),Screen On Time (hours/day),Battery Drain (mAh/day),Number of Apps Installed,Data Usage (MB/day),Age,Gender,User Behavior Class
+1,Realme Neo7,Android,361,6.2,3508,67,1122,22,Female,1
+2,Realme Neo8,Android,361,6.2,3508,67,1122,22,Female,2
+3,Realme Neo9,Android,361,6.2,3508,67,1122,22,Female,3
+4,Realme Neo10,Android,361,6.2,3508,67,1122,22,Female,4
+5,Realme Neo11,Android,361,6.2,3508,67,1122,22,Female,5
