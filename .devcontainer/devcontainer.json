@@ -1,0 +1,26 @@
+{
+  "name": "Python with uv",
+  // 与当前默认 Codespace 一致的基础镜像，避免重建后环境大变
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    // 每次 Rebuild / 新建 Codespace 自动安装最新版 uv + uvx 到 /usr/local/bin
+    "ghcr.io/devcontainer-community/devcontainer-features/astral.sh-uv:1": {}
+  },
+  // 容器创建后验证 uv 可用（幂等，可按需改成 "uv sync"）
+  "postCreateCommand": "uv --version && uvx --version",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "saoudrizwan.claude-dev",
+        "ms-python.vscode-python-envs",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ltmoerdani.opencode-copilot-chat",
+        "MS-CEINTL.vscode-language-pack-zh-hans"
+      ]
+    }
+  },
+  "remoteUser": "codespace"
+}
