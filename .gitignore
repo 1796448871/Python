@@ -5,3 +5,5 @@ noc_regions.csv
 .gitignore
 athlete_events.csv
 joblib
+
+Agent-SSS/.env

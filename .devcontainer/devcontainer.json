@@ -18,7 +18,9 @@
         "ms-python.vscode-pylance",
         "ms-python.debugpy",
         "ltmoerdani.opencode-copilot-chat",
-        "MS-CEINTL.vscode-language-pack-zh-hans"
+        "MS-CEINTL.vscode-language-pack-zh-hans",
+        "ms-toolsai.jupyter-keymap",
+        "mhutchie.git-graph"
       ]
     }
   },
