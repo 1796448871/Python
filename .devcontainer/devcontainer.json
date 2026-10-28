@@ -20,7 +20,8 @@
         "ltmoerdani.opencode-copilot-chat",
         "MS-CEINTL.vscode-language-pack-zh-hans",
         "ms-toolsai.jupyter-keymap",
-        "mhutchie.git-graph"
+        "mhutchie.git-graph",
+        "keyshout.sqlite-db-viewer"
       ]
     }
   },

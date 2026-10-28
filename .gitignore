@@ -1,9 +1,23 @@
 M101.csv
 my_data.xlsx
-src/爬虫/Pa_Chong.py
 noc_regions.csv
 .gitignore
 athlete_events.csv
 joblib
 
-Agent-SSS/.env
+# Python 缓存和虚拟环境
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 本机密钥和环境配置
+.env
+.env.*
+!.env.example
+
+
+# LangGraph SQLite checkpoint 运行数据
+# db照常提交
+**/checkpoint.db-wal
+**/checkpoint.db-shm

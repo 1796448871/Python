@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python - <<'PY'\nimport json\nfrom pathlib import Path\np = Path\\('/workspaces/Python/Agent-SSS/src/第2章-LangChain入门/2\\.5_tools\\.ipynb'\\)\ndata = json\\.loads\\(p\\.read_text\\(encoding='utf-8'\\)\\)\nfor i, cell in enumerate\\(data\\.get\\('cells', \\[\\]\\), 1\\):\n    if cell\\.get\\('cell_type'\\) == 'code':\n        print\\(f'--- CODE CELL \\{i\\} \\(execution_count=\\{cell\\.get\\(\"execution_count\"\\)\\}\\) ---'\\)\n        print\\(''\\.join\\(cell\\.get\\('source', \\[\\]\\)\\)\\)\n        for output in cell\\.get\\('outputs', \\[\\]\\):\n            text = output\\.get\\('text'\\) or output\\.get\\('data', \\{\\}\\)\\.get\\('text/plain'\\) or output\\.get\\('data', \\{\\}\\)\\.get\\('application/vnd\\.code\\.notebook\\.stdout'\\)\n            if text:\n                print\\('OUTPUT:', ''\\.join\\(text\\) if isinstance\\(text, list\\) else text\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
